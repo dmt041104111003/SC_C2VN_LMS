@@ -1,0 +1,325 @@
+{
+  "preamble": {
+    "title": "cardano2vn/contract",
+    "description": "Aiken contracts for project 'cardano2vn/contract'",
+    "version": "0.0.0",
+    "plutusVersion": "v3",
+    "compiler": {
+      "name": "Aiken",
+      "version": "v1.1.15+f03633e"
+    },
+    "license": "Apache-2.0"
+  },
+  "validators": [
+    {
+      "title": "mint.mint.mint",
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/contract~1types~1MintRedeemer"
+        }
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "store_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1ScriptHash"
+          }
+        },
+        {
+          "title": "store_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58b70101002222229800aba2aba1aab9faab9eaab9dab9a9bae0069bae0059bae0049bae0039bae0024888888888896600264653001300c00198061806800cdc3a4001300c00248889660026004601a6ea800e33001375c6020601c6ea800e2b30013002300d375400914a314a28062601a6ea8011222598009802800c56600260226ea801e00516404915980099b87480080062b30013011375400f0028b20248b201e403c8b2018180600098041baa00c8a4d13656401801",
+      "hash": "8aa4f901fc8e4c7e41df2f0587552a7903967f4a7d2e0778d8385950"
+    },
+    {
+      "title": "mint.mint.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "store_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1ScriptHash"
+          }
+        },
+        {
+          "title": "store_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58b70101002222229800aba2aba1aab9faab9eaab9dab9a9bae0069bae0059bae0049bae0039bae0024888888888896600264653001300c00198061806800cdc3a4001300c00248889660026004601a6ea800e33001375c6020601c6ea800e2b30013002300d375400914a314a28062601a6ea8011222598009802800c56600260226ea801e00516404915980099b87480080062b30013011375400f0028b20248b201e403c8b2018180600098041baa00c8a4d13656401801",
+      "hash": "8aa4f901fc8e4c7e41df2f0587552a7903967f4a7d2e0778d8385950"
+    },
+    {
+      "title": "reference.reference.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "action",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "586e010100222229800aba2aba1aab9eaab9dab9a9bae0059bae0049bae0039bae00248888888896600264653001300a00198051805800cc0280092225980099b8748008c02cdd500144c8cc892898070009807180780098061baa0028b2014180500098039baa00a8a4d13656401401",
+      "hash": "eb8c1ef5375329283af408bbaa80d7d398788c187881992ccb22f58d"
+    },
+    {
+      "title": "reference.reference.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "action",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "586e010100222229800aba2aba1aab9eaab9dab9a9bae0059bae0049bae0039bae00248888888896600264653001300a00198051805800cc0280092225980099b8748008c02cdd500144c8cc892898070009807180780098061baa0028b2014180500098039baa00a8a4d13656401401",
+      "hash": "eb8c1ef5375329283af408bbaa80d7d398788c187881992ccb22f58d"
+    },
+    {
+      "title": "store.store.spend",
+      "datum": {
+        "title": "datum",
+        "schema": {
+          "$ref": "#/definitions/types~1cip68~1CIP68"
+        }
+      },
+      "redeemer": {
+        "title": "redeemer",
+        "schema": {
+          "$ref": "#/definitions/contract~1types~1StoreRedeemer"
+        }
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58b701010022229800aba2aba1aab9faab9eaab9dab9a9bae0049bae0039bae00248888888896600264653001300a00198051805800cc0280092225980099b8748008c028dd500144ca6002601c003300e300f00198059baa0048acc004cdc3a400060166ea80122946294500a24444b30013370e9000001456600260206ea802200316404515980099b874800800a2b3001301037540110018b20228b201c4038300b3754005164024300a00130063754015149a26cac8021",
+      "hash": "39c1ce646f928f3be21b6101e081dc2c896ba2dd1023980f39b4b2ce"
+    },
+    {
+      "title": "store.store.else",
+      "redeemer": {
+        "schema": {}
+      },
+      "parameters": [
+        {
+          "title": "title",
+          "schema": {
+            "$ref": "#/definitions/ByteArray"
+          }
+        },
+        {
+          "title": "issuer_payment_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        },
+        {
+          "title": "issuer_stake_credential",
+          "schema": {
+            "$ref": "#/definitions/aiken~1crypto~1VerificationKeyHash"
+          }
+        }
+      ],
+      "compiledCode": "58b701010022229800aba2aba1aab9faab9eaab9dab9a9bae0049bae0039bae00248888888896600264653001300a00198051805800cc0280092225980099b8748008c028dd500144ca6002601c003300e300f00198059baa0048acc004cdc3a400060166ea80122946294500a24444b30013370e9000001456600260206ea802200316404515980099b874800800a2b3001301037540110018b20228b201c4038300b3754005164024300a00130063754015149a26cac8021",
+      "hash": "39c1ce646f928f3be21b6101e081dc2c896ba2dd1023980f39b4b2ce"
+    }
+  ],
+  "definitions": {
+    "ByteArray": {
+      "dataType": "bytes"
+    },
+    "Data": {
+      "title": "Data",
+      "description": "Any Plutus data."
+    },
+    "Int": {
+      "dataType": "integer"
+    },
+    "Pairs$Data_Data": {
+      "title": "Pairs<Data, Data>",
+      "dataType": "map",
+      "keys": {
+        "$ref": "#/definitions/Data"
+      },
+      "values": {
+        "$ref": "#/definitions/Data"
+      }
+    },
+    "aiken/crypto/ScriptHash": {
+      "title": "ScriptHash",
+      "dataType": "bytes"
+    },
+    "aiken/crypto/VerificationKeyHash": {
+      "title": "VerificationKeyHash",
+      "dataType": "bytes"
+    },
+    "contract/types/MintRedeemer": {
+      "title": "MintRedeemer",
+      "anyOf": [
+        {
+          "title": "Mint",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Burn",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "contract/types/StoreRedeemer": {
+      "title": "StoreRedeemer",
+      "anyOf": [
+        {
+          "title": "Update",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": []
+        },
+        {
+          "title": "Remove",
+          "dataType": "constructor",
+          "index": 1,
+          "fields": []
+        }
+      ]
+    },
+    "types/cip68/CIP68": {
+      "title": "CIP68",
+      "description": "The generic CIP68 metadatum type as defined in the CIP at\n https://cips.cardano.org/cips/cip68/.",
+      "anyOf": [
+        {
+          "title": "CIP68",
+          "dataType": "constructor",
+          "index": 0,
+          "fields": [
+            {
+              "title": "metadata",
+              "$ref": "#/definitions/Pairs$Data_Data"
+            },
+            {
+              "title": "version",
+              "$ref": "#/definitions/Int"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
